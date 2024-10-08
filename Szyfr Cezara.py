@@ -8,16 +8,16 @@ polish_alphabet = [
 numbers = [ "0" , "1" , "2" , "3", "4", "5", "6", "7", "8", "9"]
 
 
+#Sprawdza, czy wszystkie znaki wprowadzone przez użytkownika znajdują się na podanej liście znaków.
 def contains_only_letters(user_input, char_list):
-    #Sprawdza, czy wszystkie znaki wprowadzone przez użytkownika znajdują się na podanej liście znaków.
     counter = 0
     for char in user_input:
         if char in char_list:
             counter += 1
     return counter == len(user_input)
 
+#Szyfruje wprowadzone znaki, przesuwając je o określoną liczbę pozycji w alfabecie.
 def encryption(user_input, char_list, jump):
-    #Szyfruje wprowadzone znaki, przesuwając je o określoną liczbę pozycji w alfabecie.
     encrypted_text = ""
     for letter in user_input:
         if letter in char_list:
@@ -27,8 +27,9 @@ def encryption(user_input, char_list, jump):
         else:
             encrypted_text += letter  # Dodaj niezmieniony znak, jeśli nie jest w alfabecie
     return encrypted_text
+
+#Szyfruje wprowadzone znaki, przesuwając je o określoną liczbę pozycji w alfabecie.
 def dencryption(user_input, char_list, jump):
-    #Szyfruje wprowadzone znaki, przesuwając je o określoną liczbę pozycji w alfabecie.
     dencrypted_text = ""
     for letter in user_input:
         if letter in char_list:
