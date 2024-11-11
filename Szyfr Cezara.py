@@ -59,7 +59,7 @@ def on_submit1():
             encrypted_text = encryption(encrypted_message.upper(), polish_alphabet, int(jump_value))
             text_area_decrypt.delete("1.0", tk.END)  # Wyczyść pole tekstowe przed wyświetleniem nowego tekstu
             text_area_decrypt.insert(tk.END, encrypted_text)  # Wstaw zaszyfrowany tekst do pola
-            messagebox.showinfo("ERROR", "Wykonano")
+            messagebox.showinfo("DONE", "Wykonano")
         else:
             messagebox.showinfo("ERROR", "Zła wartość skoku")
     else:
@@ -74,7 +74,7 @@ def on_submit2():
             decrypted_text = dencryption(decrypted_message.upper(), polish_alphabet, int(jump_value))
             text_area_encrypt.delete("1.0", tk.END)  # Wyczyść pole tekstowe przed wyświetleniem nowego tekstu
             text_area_encrypt.insert(tk.END, decrypted_text)  # Wstaw zaszyfrowany tekst do pola
-            messagebox.showinfo("ERROR", "Wykonano")
+            messagebox.showinfo("DONE", "Wykonano")
         else:
             messagebox.showinfo("ERROR", "Zła wartość skoku")
     else:
